@@ -15,10 +15,13 @@ public class Account {
         if (name.length() > 19) {
             return false;
         }
-        long countOfSpaces = Arrays.stream(name.trim().split(""))
+        long countOfSpaces = Arrays.stream(name.split(""))
                 .filter(symbol -> symbol.equals(" "))
                 .count();
-        if (countOfSpaces != 1) {
+        long countOfTrimmedSpaces = Arrays.stream(name.trim().split(""))
+                .filter(symbol -> symbol.equals(" "))
+                .count();
+        if (countOfSpaces != 1 || countOfTrimmedSpaces != 1) {
             return false;
         }
         return true;

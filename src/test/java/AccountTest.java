@@ -22,6 +22,7 @@ public class AccountTest {
     public void onlyOneSpace() {
         assertTrue(new Account("Генри Пушнель").checkNameToEmboss());
         assertFalse(new Account(" ГенриПушнель").checkNameToEmboss());
+        assertFalse(new Account(" Генри Пушнель").checkNameToEmboss());
         assertFalse(new Account("ГенриПушнель ").checkNameToEmboss());
         assertFalse(new Account("Генри Пуш нель").checkNameToEmboss());
         assertFalse(new Account("ГенриПушнель").checkNameToEmboss());
