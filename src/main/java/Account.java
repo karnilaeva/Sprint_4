@@ -9,6 +9,9 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
+        if (name == null) {
+            return false;
+        }
         if (name.length() < 3) {
             return false;
         }

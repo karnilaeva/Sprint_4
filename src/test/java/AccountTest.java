@@ -28,5 +28,8 @@ public class AccountTest {
         assertFalse(new Account("ГенриПушнель").checkNameToEmboss());
     }
 
-
+    @Test
+    public void nullParameter() {
+        assertFalse(new Account(null).checkNameToEmboss());
+    }
 }
